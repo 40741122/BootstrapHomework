@@ -1,0 +1,205 @@
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.padding_b{
+    padding-bottom: 100px;
+}
+
+.padding_t{
+    padding-top: 100px;
+}
+
+header{
+    .navbar{
+        .logo{
+            & h2{
+                font-weight: bold;
+            }
+        }
+        .navbar_list{
+            font-weight: bold;
+            & li{
+                margin-inline: 2rem;
+                border-bottom: 5px solid green;
+                & a{
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+main{
+    .cover{
+        width: 70%;
+        align-items: center;
+        position: relative;
+        .cover_text{
+            width: 45%;
+            z-index: 2;
+
+            .d-flex{
+                justify-content: space-between;
+                & button{
+                    padding: 15px 50px;
+                    font-size: 1.25rem;
+                    font-weight: bold;
+                }
+            }
+        }
+        & img{
+            width: 60%;
+            position: absolute;
+            vertical-align: middle;
+            right: 0;
+        }
+    }
+
+    .video{
+        width: 75%;
+        margin: auto;
+        .card-img-overlay{
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            & h1{
+                color: #fff;
+                margin-bottom: 3rem;
+            }
+
+            & button{
+                font-weight: bold;
+                font-size: 1.25rem;
+                padding: 15px 25px;
+            }
+        }
+    }
+
+    .ds_container{
+        padding: 0;
+    }
+
+    .ds{
+        min-height: 550px;
+        justify-content: center;
+        margin-inline:3rem;
+        > div{
+            flex: 33.33%;
+            margin-inline: 2rem;
+        }
+
+        .ds_text{
+            & h2{
+                font-size: 2.5rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .member{
+        .member_card{
+            .card{
+                width: 360px;
+                position: relative;
+                .card-img-overlay{
+                    font-weight: bold;
+                    position: absolute;
+                    top: 60%;
+                }
+            }
+        }
+    
+        .member_ds{
+            margin-top: 2rem;
+            text-align: center;
+            & h2{
+                font-size: 2.5rem;
+            }
+    
+            .email_input{
+                margin-top: 2rem;
+                justify-content: center;
+                & input{
+                    width: 400px;
+                    margin-right: 1rem;
+                }
+                & button{
+                    font-weight: bold;
+                    font-size: 1.25rem;
+                    padding: 15px 25px;
+                }
+             }
+    
+             & a{
+                text-align: left;
+             }
+        }
+    }
+
+    .brand{
+        & li{
+            margin-inline: 2rem;
+        }
+    }
+
+    .started{
+        color: white;
+        padding: 150px 0;
+        background: green;
+        text-align: center;
+        & button{
+            font-size: 1.25rem;
+            font-weight: bold;
+            padding: 15px 25px;
+        }
+    }
+}
+
+footer{
+    .bottom_content{
+        padding-top: 3rem;
+        font-weight: bold;
+        margin: auto;
+        width: 90%;
+        align-items: flex-start;
+        justify-content: space-between;
+        .footer_logo{
+            align-items: center;
+            & img{
+                width: 100%;
+            }
+            & h5{
+                font-weight: bold;
+            }
+        }
+
+        .bottom_link{
+            & ul{
+                padding-inline: 2.25rem;
+            }
+
+            & a{
+                color: #000;
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    .copy_right{
+        justify-content: space-between;
+        font-weight: bold;
+        & a{
+            color: #000;
+        }
+    }
+}
