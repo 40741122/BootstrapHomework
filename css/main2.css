@@ -14,19 +14,43 @@ a{
 
 header{
     .navbar{
-        .navbar_list{
+        padding-block: 18px;
+
+        .navbar_logo{
+            .navbar-brand{
+                font-size: 35px;
+            }
+        }
+
+        .navbar-nav{
+            align-items: center;
+
             & li{
                 margin-inline: 2rem;
-                border-bottom: 5px solid #4BA87D;
                 & a{
                     color: #000;
                 }
+
+                .bottom_line{
+                    background: #4BA87D;
+                    height: 5px;
+                }
             }
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .nav-item{
+            display: none;
         }
     }
 }
 
 main{
+    background-image: url("../images/BGstuff.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto ;
+
     .cover_se{
         padding-block: 100px;
         .cover{
@@ -39,6 +63,10 @@ main{
                 & h1{
                     font-size: 59px;
                     line-height: 71px;
+
+                    & br{
+                        display: none;
+                    }
                 }
 
                 .cover_btn{
@@ -56,7 +84,31 @@ main{
                 position: absolute;
                 right: 0;
             }
-        }    
+        }
+
+        @media screen and (max-width:768px) {
+            padding-bottom:0;
+
+            .cover{
+                .cover_text{
+                    margin-top:-70px;
+                    width: 100%;
+                    & h1{
+                        & br{
+                            display: block;
+                        }
+                    }
+                    
+                    .blank{
+                        height: 150px;
+                    }
+                }
+
+                & img{
+                    width: 100%;
+                }
+            }
+        }
     }
 
     .video_se{
@@ -80,6 +132,14 @@ main{
                 }
             }
         }
+
+        @media screen and (max-width:768px) {
+            padding-block: 50px;
+
+            .video{
+                width: 100%;
+            }
+        }
     }
 
     .describe_se{
@@ -89,7 +149,7 @@ main{
             justify-content: center;
             margin-inline:3rem;
             > div{
-                flex: 33.33%;
+                flex: 0 0 33.33%;
                 margin-inline: 2rem;
             }
 
@@ -110,6 +170,18 @@ main{
 
                 & p{
                     font-size: 1rem;
+                }
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            .ds{
+                flex-direction: column;
+                margin: 0;
+                > div{
+                    margin: 0;
+                    margin-block: 50px;
+                    width: 70%;
                 }
             }
         }
@@ -170,6 +242,19 @@ main{
                 text-align: left;
              }
         }
+
+        @media screen and (max-width:768px) {
+            .member{
+                flex-direction: column;
+                .member_card{
+                    margin-block: 50px;
+                    width: 100%;
+                    .card-img-overlay{
+                        top:70%;
+                    }
+                }
+            }
+        }
     }
 
     .brand_se{
@@ -181,6 +266,19 @@ main{
 
             & li{
                 margin-inline: 2rem;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            .brand{
+                & ul{
+                    flex-wrap: wrap;
+
+                    & li{
+                        flex: 0 0 calc(50% - 4rem);
+                        margin-block: 2rem;
+                    }
+                }
             }
         }
     }
@@ -239,6 +337,29 @@ footer{
         font-weight: bold;
         & a{
             color: #000;
+        }
+    }
+
+    @media  screen and (max-width:768px) {
+        .bottom_content{
+            flex-direction: column;
+            .bottom_link{
+                width: 100%;
+                flex-direction: column;
+                flex-wrap: wrap;
+                height: 400px;
+                & ul{
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    
+        .copy_right{
+            flex-direction: column;
+            > *{
+                margin-bottom: 50px;
+            }
         }
     }
 }
